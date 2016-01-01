@@ -14,12 +14,13 @@ console.log(xhr.status);
 console.log(xhr.statusText);
 var name = xhr.responseXML.item.name;
 var name2 = xhr.responseXML.name;
-document.write(name);
-document.write(name2);
-document.write("hello");
+
+    var div = document.getElementById("textDiv");
+    div.textContent = "my text";
+    var text = div.textContent;
 
  </script>
-
+<div id="textDiv"></div>
 <button type="button">Click Me!</button>
 
 </body>
