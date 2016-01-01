@@ -7,7 +7,7 @@
 <script>
 var xhr = new XMLHttpRequest();
 var url = http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=4902;
-xhr.open("GET", url, true);
+xhr.open("GET", url, false);
 xhr.send();
 
 console.log(xhr.status);
@@ -16,6 +16,7 @@ var name = xhr.responseXML.item.name;
 var name2 = xhr.responseXML.name;
 document.write(name);
 document.write(name2);
+document.write(hello);
 
  </script>
 
