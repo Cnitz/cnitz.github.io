@@ -5,21 +5,13 @@
 </head>
 <body>
 <script type="text/javascript">
-var xhr = new XMLHttpRequest();
-var url = http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=4902;
-xhr.open("GET", url, false);
-xhr.send();
 
-console.log(xhr.status);
-console.log(xhr.statusText);
-var name = xhr.responseXML.item.name;
-var name2 = xhr.responseXML.name;
 
     var div = document.getElementById("textDiv");
     div.textContent = "my text";
     var text = div.textContent;
 
- </script>
+</script>
 <div id="textDiv"></div>
 <button type="button">Click Me!</button>
 
