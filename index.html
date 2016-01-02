@@ -6,14 +6,14 @@
 	document.write("Hello World!");
 
 	</script>
-	<script>
+	<script type="text/javascript">
 	function Get(yourUrl){
 		var Httpreq = new XMLHttpRequest(); // a new request
 		Httpreq.open("GET",yourUrl,false);
 		Httpreq.send(null);
 		return Httpreq.responseText;          
     }</script>
-	<script>
+	<script type="text/javascript">
 	var url = "http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=4902";
 	var json_obj = JSON.parse(Get(url));
 		document.write("Fucking apis");
