@@ -4,6 +4,18 @@
 	<title>This Is My Page</title>
     <script type="text/javascript">
 	document.write("Hello World!");
+
+	</script>
+	<script>
+	function Get(yourUrl){
+		var Httpreq = new XMLHttpRequest(); // a new request
+		Httpreq.open("GET",yourUrl,false);
+		Httpreq.send(null);
+		return Httpreq.responseText;          
+    }</script>
+	<script>
+	var url = "http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=4902";
+	var json_obj = JSON.parse(Get(url));
 	</script>
 </head>
 <body>
