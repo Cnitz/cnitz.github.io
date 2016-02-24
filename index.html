@@ -4,8 +4,16 @@
 	<title>This Is My Page</title>
 </head>
 <body>
+<script>
 
-<button type="button">Click Me!</button>
+$.getJSON("http://www.reddit.com/r/pics/.json?jsonp=?", function(data) { 
+    $.each(data.data.children, function(i,item){
+        $("<img/>").attr("src", item.data.url).appendTo("#images");
+    });
+});
+
+</script>
+		
 
 </body>
 </html>
