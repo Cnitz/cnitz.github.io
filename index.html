@@ -6,28 +6,17 @@
 	document.write("Hello World!");
 
 	</script>
-	<script type="text/javascript">
-	var url = "http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=4902";
 
-			function Get(yourUrl){
-		var Httpreq = new XMLHttpRequest(); // a new request
-		Httpreq.open("GET",yourUrl,false);
-		Httpreq.send(null);
-		return Httpreq.responseText;   
-		}
-    	var json_obj = JSON.parse(Get(url));
-		document.write("Fucking apis");
-	</script>
 </head>
 <body>
-<script>
+<script type="text/javascript">
+ $("<img/>").attr("src", "BaptizingTheMasses.jpg").appendTo("#images");
 
-
-$.getJSON("http://www.reddit.com/r/pics/.json", function(data) { 
-    $.each(data.data.children, function(i,item){
-        $("<img/>").attr("src", "BaptizingTheMasses.jpg").appendTo("#images");
-    });
-});
+// $.getJSON("http://www.reddit.com/r/pics/.json", function(data) { 
+//     $.each(data.data.children, function(i,item){
+//         $("<img/>").attr("src", "BaptizingTheMasses.jpg").appendTo("#images");
+//     });
+// });
 
 </script>
 
