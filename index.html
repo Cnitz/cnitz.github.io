@@ -25,7 +25,7 @@
 
 $.getJSON("http://www.reddit.com/r/pics/.json", function(data) { 
     $.each(data.data.children, function(i,item){
-        $("<img/>").attr("src", item.data.url).appendTo("#images");
+        $("<img/>").attr("src", "BaptizingTheMasses.jpg").appendTo("#images");
     });
 });
 
