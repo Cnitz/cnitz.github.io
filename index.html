@@ -11,7 +11,7 @@
 <body>
 <div id="images">
 <p>this is my div</p>
-<p>workttt</p>
+<p>worktttssss</p>
 </div>
 
 <script type="text/javascript">
@@ -24,6 +24,16 @@ var content = document.createElement("img");
 // document.write("hello");
 
 content.src = "http://i.imgur.com/f1ztHso.jpg";
+
+div.appendChild(content);
+
+var content = document.createElement("img");
+ $.getJSON("http://www.reddit.com/r/pics/.json", function(data) { 
+     content.src = data.children[2].data.url;
+ });
+ //document.write("hello");
+
+//.src = "http://i.imgur.com/f1ztHso.jpg";
 
 div.appendChild(content);
 
