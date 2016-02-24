@@ -18,16 +18,15 @@
 
 var div = document.getElementById("images");
 var content = document.createElement("img");
-content.src = "BaptizingTheMasses.jpg";
+$.getJSON("http://www.reddit.com/r/pics/.json", function(data) { 
+    content.src = data.data.children[2].data.url;
+});
+
 div.appendChild(content);
 
 
 
-// $.getJSON("http://www.reddit.com/r/pics/.json", function(data) { 
-//     $.each(data.data.children, function(i,item){
-//         $("<img/>").attr("src", "BaptizingTheMasses.jpg").appendTo("#images");
-//     });
-// });
+
 
 </script>
 
