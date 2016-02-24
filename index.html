@@ -21,7 +21,7 @@ var content = document.createElement("img");
 $.getJSON("http://www.reddit.com/r/pics/.json", function(data) { 
     content.src = data.data.children[2].data.url;
 });
-document.write(content.src);
+document.write("hello");
 
 div.appendChild(content);
 
