@@ -13,14 +13,14 @@
 <body>
 <div id="images">
 <p>this is my div</p>
-<p>workingssss</p>
+<p>working</p>
 </div>
 
 <script type="text/javascript">
 
  var div = document.getElementById("images");
- var content = document.createElement("img");
-var object = {}
+
+ var info = {}
 
 $.ajax({
 
@@ -29,24 +29,26 @@ $.ajax({
   url: "https://www.reddit.com/r/pics/.json",
   
   success: function(data){
-var = data
- var url = data.data.children[2].data.url
- content.src = format(url)
+  //
+  for (i = 2; i < data.data.children.length; i++) { 
+    listPics(data, i)
+}
+  
+
  
+   }
+
+}) 
 
 
- // if(url.startsWith("http:") || !url.startsWith("http"))
- // 			httpsUrl = "https" + url.substring(4);
- // else
- // 			httpsUrl = url
- // console.log(httpsUrl)
- // if(!httpsUrl.endsWith(".jpg") || !httpsUrl.endsWith(".png") ){
-	//   	content.src = httpsUrl + ".png";
- //  }
- //  }
 
-})
-div.appendChild(content);
+function listPics(data, i){
+ var content = document.createElement("img");
+ var url = data.data.children[i].data.url
+ content.src = format(url)
+ div.appendChild(content);
+
+}
 
 function format(url){
 	var httpsUrl = ""
@@ -59,7 +61,7 @@ function format(url){
 	  	httpsUrl = httpsUrl + ".png";
   }
   return httpsUrl;
-}
+  }
 
 
 </script>
