@@ -29,9 +29,10 @@ $.ajax({
   url: "https://www.reddit.com/r/pics/.json",
   
   success: function(data){
-  //
+  var children = data.data.children;
   for (i = 2; i < data.data.children.length; i++) { 
-    listPics(data, i)
+      if(!children[i].data.url.contains("gallery") && !children[i].data.url.contains("/a/"))
+            listPics(data, i)
 }
   
 
