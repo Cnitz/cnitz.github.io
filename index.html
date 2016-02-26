@@ -30,8 +30,10 @@ $.ajax({
   
   success: function(data){
   var children = data.data.children;
-  for (i = 2; i < data.data.children.length; i++) { 
-      if(!children[i].data.url.contains("gallery"))
+  for (i = 2; i < data.data.children.length; i++) {
+      console.log(children)
+      console.log(children[i].data.url.contains("gallery"))
+      //if(!children[i].data.url.contains("gallery"))
             listPics(data, i)
 }
   
