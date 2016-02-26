@@ -13,7 +13,7 @@
 <body>
 <div id="images">
 <p>this is my div</p>
-<p>test : 2</p>
+<p>test : 3</p>
 </div>
 
 <script type="text/javascript">
@@ -31,7 +31,7 @@ $.ajax({
   success: function(data){
   var children = data.data.children;
   for (i = 2; i < data.data.children.length; i++) { 
-      if(!children[i].data.url.contains("gallery") && !children[i].data.url.contains("/a/"))
+      if(!children[i].data.url.contains("gallery"))
             listPics(data, i)
 }
   
