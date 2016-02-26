@@ -13,7 +13,7 @@
 <body>
 <div id="images">
 <p>this is my div</p>
-<p>working</p>
+<p>    kklklk</p>
 </div>
 
 <script type="text/javascript">
@@ -46,9 +46,8 @@ function listPics(data, i){
  var content = document.createElement("img");
  var url = data.data.children[i].data.url
  content.src = format(url)
- div.appendChild(content);
-
-}
+ content.style = "width:1024px height:800px"
+ div.appendChild(content);}
 
 function format(url){
 	var httpsUrl = ""
@@ -61,6 +60,7 @@ function format(url){
 	  	httpsUrl = httpsUrl + ".png";
   }
   return httpsUrl;
+  
   }
 
 
