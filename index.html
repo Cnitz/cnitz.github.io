@@ -32,7 +32,7 @@ $.ajax({
   var children = data.data.children;
   for (i = 2; i < data.data.children.length; i++) {
       console.log(children)
-      console.log(children[i].data.url.contains("gallery"))
+      console.log(children[i].data.url.indexOf("gallery") > -1)
       //if(!children[i].data.url.contains("gallery"))
             listPics(data, i)
 }
