@@ -13,7 +13,7 @@
 <body>
 <div id="images">
 <p>this is my div</p>
-<p>test : 7</p>
+<p>test : 8</p>
 </div>
 
 <script type="text/javascript">
@@ -33,7 +33,7 @@ $.ajax({
   for (i = 2; i < data.data.children.length; i++) {
      // console.log(children)
      // console.log()
-     if(!(children[i].data.url.indexOf("gallery") > -1))
+     if(!(contains(children[i].data.url, "gallery") && !(contains(children[i].data.url, "imgur.com/a/") )
             listPics(data, i)
 }
   
@@ -65,6 +65,11 @@ function format(url){
   }
   return httpsUrl;
   
+  }
+
+  function contains(src, sub){
+  		return src.indexOf(sub) > -1
+
   }
 
 
