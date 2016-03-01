@@ -33,7 +33,8 @@ $.ajax({
   for (i = 2; i < data.data.children.length; i++) {
      // console.log(children)
      // console.log()
-     if(!(contains(children[i].data.url, "gallery") && !(contains(children[i].data.url, "imgur.com/a/") )
+     if( !( contains(children[i].data.url, "gallery") ) && 
+     	 !( contains(children[i].data.url, "imgur.com/a/") ) )
             listPics(data, i)
 }
   
@@ -71,6 +72,13 @@ function format(url){
   		return src.indexOf(sub) > -1
 
   }
+
+
+
+
+
+
+
 
 
 </script>
