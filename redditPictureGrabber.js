@@ -6,6 +6,12 @@
 		var listType = "new"
 
 
+		function setLimit(limits){
+			
+			limit = limits;
+
+		}
+
 		function setType(type){
 
 			listType = type;

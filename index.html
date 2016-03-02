@@ -8,6 +8,7 @@
 
 	subreddit <input id="subinput" value="pics" type="text" name="sub" onchange="getImages()"></input>
 	<button onclick="getImages()">Go!</button>
+	limit <input id="limitinput" value="20" type="text" name="sub" onchange="setLimit(value)"></input>
 	<form action="">
 		<input type="radio" name="type" value="hot" onclick="setType('')" checked="checked">Hot<br>
 		<input type="radio" name="type" value="new" onclick="setType('new')">New<br>
