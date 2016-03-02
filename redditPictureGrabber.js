@@ -3,11 +3,11 @@
 		var div = document.getElementById("images");
 
 		var limit = 100;
-		var listType = "new"
+		var listType = ""
 
 
 		function setLimit(limits){
-			
+
 			limit = limits;
 
 		}
