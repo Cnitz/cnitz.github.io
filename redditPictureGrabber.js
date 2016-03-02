@@ -2,7 +2,14 @@
 
 		var div = document.getElementById("images");
 
-		
+		var limit = 100;
+		var listType = "new"
+
+
+		function setType(type){
+
+			listType = type;
+		}
 
 		function getImages(sub){
 
@@ -19,7 +26,7 @@
 
 				dataType: "json",
 
-				url: "https://www.reddit.com/r/" + sub + "/.json?limit=10&after=t3_10omtd/",
+				url: "https://www.reddit.com/r/" + sub + "/" + listType + ".json?limit=" + limit + "&after=t3_10omtd/",
 
 				success: function(data){
 					var children = data.data.children;

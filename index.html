@@ -8,6 +8,13 @@
 
 	subreddit <input id="subinput" value="pics" type="text" name="sub" onchange="getImages()"></input>
 	<button onclick="getImages()">Go!</button>
+	<form action="">
+		<input type="radio" name="type" value="hot" onclick="setType('')" checked="checked">Hot<br>
+		<input type="radio" name="type" value="new" onclick="setType('new')">New<br>
+		<input type="radio" name="type" value="rising" onclick="setType('rising')">Rising<br>
+		<input type="radio" name="type" value="top" onclick="setType('top')">Top
+	</form>
+
 
 </head>
 <body>
@@ -17,12 +24,12 @@
 	</div>
 
 	
-<style> 
-	img.resize{
-		max-width:100%;
-		max-height:100vh;
-	}
+	<style> 
+		img.resize{
+			max-width:100%;
+			max-height:100vh;
+		}
 
-</style>
+	</style>
 </body>
 </html>
